@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账单</title></head>
+<body><h3>账单（门票：30）:</h3>
+<!--<ol>-->
+
+<!--    {% for zhangdan in xiyu %}-->
+<!--        <li><label style="display:inline-block;width:120px;">-->
+<!--        {{ zhangdan.xiaofeianmoxiangmu }}</label>-->
+<!--        <label style="display:inline-block;width:90px;">:-->
+<!--            {{ zhangdan.xiaofeianmojine  }}</label>-->
+<!--        <label style="display:inline-block;width:90px;">-->
+<!--            {{ zhangdan.xiaofeiqitaanmoxiangmu }}</label> {% empty %}-->
+<!--         <label style="display:inline-block;width:90px;">:-->
+<!--            {{ zhangdan.xiaofeiqitaanmoxiangmujine }}</label>-->
+<!--        <label style="display:inline-block;width:90px;">-->
+<!--            {{ zhangdan.xiaofeizhuyuxiangmu }}</label>-->
+<!--        <label style="display:inline-block;width:90px;">:-->
+<!--            {{ zhangdan.xiaofeizhuyujine }}</label>-->
+<!--         <label style="display:inline-block;width:90px;">-->
+<!--            {{ zhangdan.xiaofeiqitazhuyuxiangmu }}</label>-->
+<!--        <label style="display:inline-block;width:90px;">:-->
+<!--            {{ zhangdan.xiaofeiqitazhuyujine }}</label>-->
+<!--        <label style="display:inline-block;width:90px;">合计:-->
+<!--            {{ zhangdan.zhangdanzonge}}</label>-->
+<!--        没有查询结果! {% endfor %}-->
+<!--</ol>-->
+
+<div class="results">
+    <table id="result_list">
+        <thead>
+        <tr>
+            <th scope="col" class="sortable column-bianhao">
+                <div class="text">
+                   <p style="text-align: center">账单编号</p>
+                <div class="clear"></div>
+            </th>
+             <th scope="col" class="sortable column-xiaofeianmoxiangmu">
+
+                <div class="text">
+                    <p style="text-align: center">消费按摩项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+            <th scope="col" class="sortable column-xiaofeianmojine">
+                <div class="text">
+                    <p style="text-align: center">消费按摩金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitaanmoxiangmu">
+                <div class="text">
+                    <p style="text-align: center">消费其他按摩项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitaanmoxiangmujine">
+                <div class="text">
+                     <p style="text-align: center">消费其他按摩金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeizhuyuxiangmu">
+                <div class="text">
+                     <p style="text-align: center">消费助浴项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeizhuyujine">
+                <div class="text">
+                    <p style="text-align: center">消费助浴金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitazhuyuxiangmu">
+                <div class="text">
+                    <p style="text-align: center">消费其他助浴项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitazhuyujine">
+                <div class="text">
+                    <p style="text-align: center">消费其他助浴项目金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-zhangdanzonge">
+                <div class="text">
+                    <p style="text-align: center">账单总额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for zhangdan in xiyu %}
+        <tr >
+
+            <th class="field-bianhao"><a href="/admin/Manage/%E6%B6%88%E8%B4%B9/{{ zhangdan.bianhao }}/change/">{{ zhangdan.bianhao }}</a>
+            </th>
+
+            {% if zhangdan.xiaofeianmoxiangmu != None  %}
+            <th class="field-xiaofeianmoxiangmu nowrap">{{zhangdan.xiaofeianmoxiangmu.xiangmuming}}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeianmojine != None  %}
+            <th class="field-xiaofeianmojine">{{ zhangdan.xiaofeianmojine}}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeiqitaanmoxiangmu != None  %}
+            <th class="field-xiaofeiqitaanmoxiangmu nowrap">{{ zhangdan.xiaofeiqitaanmoxiangmu.xiangmuming }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeiqitaanmoxiangmujine != None  %}
+            <th class="field-xiaofeiqitaanmoxiangmujine">{{zhangdan.xiaofeiqitaanmoxiangmujine}}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeizhuyuxiangmu != None  %}
+            <th class="field-xiaofeizhuyuxiangmu nowrap">{{ zhangdan.xiaofeizhuyuxiangmu.xiangmuming}}</th>
+            {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeizhuyujine != None  %}
+            <th class="field-xiaofeizhuyujine">{{ zhangdan.xiaofeizhuyujine }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeiqitazhuyuxiangmu != None  %}
+            <th class="field-xiaofeiqitazhuyuxiangmu nowrap">{{ zhangdan.xiaofeiqitazhuyuxiangmu.xiangmuming }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.xiaofeiqitazhuyujine != None  %}
+            <th class="field-xiaofeiqitazhuyujine">{{ zhangdan.xiaofeiqitazhuyujine }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan.zhangdanzonge != None  %}
+            <th class="field-zhangdanzonge">{{ zhangdan.zhangdanzonge }}</th>
+            {% else %}
+            <th>-</th>
+            {% endif %}
+        </tr>
+        <input type="button" name="buttonzhangdan" value="返回" onClick='javascript :history.back(-1);'>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

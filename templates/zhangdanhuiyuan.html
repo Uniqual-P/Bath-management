@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员账单</title></head>
+<body><h3>会员账单（门票：30）:</h3>
+
+<div class="results">
+    <table id="result_list">
+        <thead>
+        <tr>
+            <th scope="col" class="sortable column-bianhao">
+                <div class="text">
+                   <p style="text-align: center">账单编号</p>
+                <div class="clear"></div>
+            </th>
+             <th scope="col" class="sortable column-xiaofeianmoxiangmu">
+                <div class="text">
+                    <p style="text-align: center">消费按摩项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+            <th scope="col" class="sortable column-xiaofeianmojine">
+                <div class="text">
+                    <p style="text-align: center">消费按摩金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitaanmoxiangmu">
+                <div class="text">
+                    <p style="text-align: center">消费其他按摩项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitaanmoxiangmujine">
+                <div class="text">
+                     <p style="text-align: center">消费其他按摩金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeizhuyuxiangmu">
+                <div class="text">
+                     <p style="text-align: center">消费助浴项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeizhuyujine">
+                <div class="text">
+                    <p style="text-align: center">消费助浴金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitazhuyuxiangmu">
+                <div class="text">
+                    <p style="text-align: center">消费其他助浴项目</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-xiaofeiqitazhuyujine">
+                <div class="text">
+                    <p style="text-align: center">消费其他助浴项目金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+
+            <th scope="col" class="sortable column-zhangdanzonge">
+                <div class="text">
+                    <p style="text-align: center">账单总额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+               <th scope="col" class="sortable column-youhuijine">
+                <div class="text">
+                    <p style="text-align: center">优惠金额</p>
+                </div>
+                <div class="clear"></div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for zhangdan_huiyuan in xiyu %}
+        <tr >
+
+            <th class="field-bianhao"><a href="/admin/Manage/%E6%B6%88%E8%B4%B9/{{ zhangdan_huiyuan.bianhao }}/change/">{{ zhangdan_huiyuan.bianhao }}</a>
+            </th>
+            {% if zhangdan_huiyuan.xiaofeianmoxiangmu != None  %}
+            <th class="field-xiaofeianmoxiangmu nowrap">{{zhangdan_huiyuan.xiaofeianmoxiangmu.xiangmuming}}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeianmojine != None  %}
+            <th class="field-xiaofeianmojine">{{ zhangdan_huiyuan.xiaofeianmojine}}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeiqitaanmoxiangmu != None  %}
+            <th class="field-xiaofeiqitaanmoxiangmu nowrap">{{ zhangdan_huiyuan.xiaofeiqitaanmoxiangmu.xiangmuming }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeiqitaanmoxiangmujine != None  %}
+            <th class="field-xiaofeiqitaanmoxiangmujine">{{zhangdan_huiyuan.xiaofeiqitaanmoxiangmujine}}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeizhuyuxiangmu != None  %}
+            <th class="field-xiaofeizhuyuxiangmu nowrap">{{ zhangdan_huiyuan.xiaofeizhuyuxiangmu.xiangmuming}}</th>
+            {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeizhuyujine != None  %}
+            <th class="field-xiaofeizhuyujine">{{ zhangdan_huiyuan.xiaofeizhuyujine }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeiqitazhuyuxiangmu != None  %}
+            <th class="field-xiaofeiqitazhuyuxiangmu nowrap">{{ zhangdan_huiyuan.xiaofeiqitazhuyuxiangmu.xiangmuming }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.xiaofeiqitazhuyujine != None  %}
+            <th class="field-xiaofeiqitazhuyujine">{{ zhangdan_huiyuan.xiaofeiqitazhuyujine }}</th>
+                        {% else %}
+            <th>-</th>
+            {% endif %}
+
+            {% if zhangdan_huiyuan.zhangdanzonge != None  %}
+            <th class="field-zhangdanzonge">{{ zhangdan_huiyuan.zhangdanzonge }}</th>
+            {% else %}
+            <th>-</th>
+            {% endif %}
+            {% if zhangdan_huiyuan.youhuijine != None  %}
+            <th class="field-zhangdanzonge">{{ zhangdan_huiyuan.youhuijine }}</th>
+            {% else %}
+            <th>-</th>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-hans" class=" "><head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+        <title>个人主页</title>
+
+
+
+
+
+
+
+            <link rel="stylesheet" href="/static/admin/simpleui-x/elementui/theme-chalk/index.css">
+            <link rel="stylesheet" href="/static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css">
+
+
+        <link rel="stylesheet" href="/static/admin/simpleui-x/css/index.css?_=3.2">
+        <link rel="stylesheet" href="/static/admin/simpleui-x/waves/waves.min.css?_=2.1">
+
+    <link rel="stylesheet" href="/static/admin/simplepro/css/index.css">
+    <link rel="stylesheet" href="/static/admin/simplepro/nprogress/nprogress.css">
+
+
+
+
+</head>
+<body class="">
+<style type="text/css">
+    .el-tabs__nav .el-tabs__item:nth-child(1) .el-icon-close {
+        display: none;
+    }
+
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    [v-block] {
+        display: none;
+    }
+</style>
+
+
+
+
+
+
+
+
+            <script type="text/javascript">var menus=[{"name": "\u5185\u5bb9\u7c7b\u578b", "icon": "far fa-file", "models": [{"name": "\u5185\u5bb9\u7c7b\u578b", "icon": "far fa-file", "url": "/contenttypes/contenttype/", "addUrl": null, "breadcrumbs": [{"name": "\u5185\u5bb9\u7c7b\u578b", "icon": "far fa-file"}, {"name": "\u5185\u5bb9\u7c7b\u578b", "icon": "far fa-file"}], "eid": 1002}], "eid": 1001}, {"name": "\u6536\u652f\u7ba1\u7406", "icon": "far fa-file", "models": [{"name": "\u6536\u652f\u8bb0\u5f55", "icon": "far fa-file", "url": "/finance/record/", "addUrl": "/finance/record/add/", "breadcrumbs": [{"name": "\u6536\u652f\u7ba1\u7406", "icon": "far fa-file"}, {"name": "\u6536\u652f\u8bb0\u5f55", "icon": "far fa-file"}], "eid": 1004}], "eid": 1003}, {"name": "\u7ba1\u7406", "icon": "far fa-file", "models": [{"name": "\u65e5\u5fd7\u8bb0\u5f55", "icon": "far fa-file", "url": "/admin/logentry/", "addUrl": null, "breadcrumbs": [{"name": "\u7ba1\u7406", "icon": "far fa-file"}, {"name": "\u65e5\u5fd7\u8bb0\u5f55", "icon": "far fa-file"}], "eid": 1006}], "eid": 1005}, {"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file", "models": [{"name": "Demo1", "icon": "far fa-file", "url": "/demo/demo1/", "addUrl": "/demo/demo1/add/", "breadcrumbs": [{"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file"}, {"name": "Demo1", "icon": "far fa-file"}], "eid": 1008}, {"name": "Demo2", "icon": "far fa-file", "url": "/demo/demo2/", "addUrl": "/demo/demo2/add/", "breadcrumbs": [{"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file"}, {"name": "Demo2", "icon": "far fa-file"}], "eid": 1009}, {"name": "\u5458\u5de5\u7ba1\u7406", "icon": "fas fa-user-tie", "url": "/demo/employe/", "addUrl": "/demo/employe/add/", "breadcrumbs": [{"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file"}, {"name": "\u5458\u5de5\u7ba1\u7406", "icon": "fas fa-user-tie"}], "eid": 1010}, {"name": "\u5ba2\u6237\u4fe1\u606f", "icon": "far fa-file", "url": "/demo/customers/", "addUrl": "/demo/customers/add/", "breadcrumbs": [{"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file"}, {"name": "\u5ba2\u6237\u4fe1\u606f", "icon": "far fa-file"}], "eid": 1011}, {"name": "\u804c\u52a1\u7ba1\u7406", "icon": "far fa-file", "url": "/demo/title/", "addUrl": "/demo/title/add/", "breadcrumbs": [{"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file"}, {"name": "\u804c\u52a1\u7ba1\u7406", "icon": "far fa-file"}], "eid": 1012}, {"name": "\u90e8\u95e8\u7ba1\u7406", "icon": "far fa-file", "url": "/demo/department/", "addUrl": "/demo/department/add/", "breadcrumbs": [{"name": "\u7efc\u5408\u7ba1\u7406", "icon": "far fa-file"}, {"name": "\u90e8\u95e8\u7ba1\u7406", "icon": "far fa-file"}], "eid": 1013}], "eid": 1007}, {"name": "\u8ba4\u8bc1\u548c\u6388\u6743", "icon": "fas fa-shield-alt", "models": [{"name": "\u6743\u9650", "icon": "far fa-file", "url": "/auth/permission/", "addUrl": null, "breadcrumbs": [{"name": "\u8ba4\u8bc1\u548c\u6388\u6743", "icon": "fas fa-shield-alt"}, {"name": "\u6743\u9650", "icon": "far fa-file"}], "eid": 1015}, {"name": "\u7528\u6237", "icon": "far fa-user", "url": "/auth/user/", "addUrl": null, "breadcrumbs": [{"name": "\u8ba4\u8bc1\u548c\u6388\u6743", "icon": "fas fa-shield-alt"}, {"name": "\u7528\u6237", "icon": "far fa-user"}], "eid": 1016}, {"name": "\u7ec4", "icon": "fas fa-users-cog", "url": "/auth/group/", "addUrl": null, "breadcrumbs": [{"name": "\u8ba4\u8bc1\u548c\u6388\u6743", "icon": "fas fa-shield-alt"}, {"name": "\u7ec4", "icon": "fas fa-users-cog"}], "eid": 1017}], "eid": 1014}]</script>
+
+
+
+<div id="main"><link rel="stylesheet" type="text/less" href="/static/admin/simpleui-x/theme/default.less"><style type="text/css" id="less:static-admin-simpleui-x-theme-default">.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
+  color: #515a6e !important;
+  border-bottom: #515a6e 2px solid !important;
+}
+.el-button--text {
+  color: #515a6e !important;
+}
+.el-button--primary:focus,
+.el-button--primary:hover {
+  color: #515a6e;
+  border-color: rgba(81, 90, 110, 0.9) !important;
+  background-color: rgba(81, 90, 110, 0.8) !important;
+}
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: rgba(81, 90, 110, 0.2) !important;
+  color: #515a6e !important;
+}
+.el-select-dropdown__item.selected {
+  color: #515a6e !important;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+textarea:focus,
+select:focus,
+.vTextField:focus {
+  border-color: #515a6e !important;
+}
+.el-button--primary {
+  background-color: #515a6e !important;
+  border-color: #515a6e !important;
+}
+tbody a:link,
+tbody a:visited {
+  color: #515a6e !important;
+}
+tbody tr:hover td,
+tbody tr:hover th {
+  background-color: rgba(81, 90, 110, 0.2) !important;
+}
+a:link,
+a:visited {
+  color: #515a6e !important;
+}
+.results {
+  color: inherit !important;
+}
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background-color: rgba(81, 90, 110, 0.2) !important;
+}
+.el-date-table td.today span {
+  color: #515a6e !important;
+}
+.el-date-table td.available:hover {
+  color: #515a6e !important;
+}
+.el-picker-panel__icon-btn:hover {
+  color: rgba(81, 90, 110, 0.8) !important;
+}
+.el-range-editor.is-active,
+.el-range-editor.is-active:hover {
+  border-color: #515a6e !important;
+}
+.el-date-table td.end-date span,
+.el-date-table td.start-date span {
+  background-color: #515a6e !important;
+}
+.el-date-table td.in-range div,
+.el-date-table td.in-range div:hover,
+.el-date-table.is-week-mode .el-date-table__row.current div,
+.el-date-table.is-week-mode .el-date-table__row:hover div {
+  background-color: rgba(81, 90, 110, 0.2) !important;
+}
+.el-time-panel__btn.confirm {
+  color: #515a6e !important;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  color: #515a6e;
+  background-color: #515a6e !important;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: #515a6e !important;
+}
+.el-tabs--border-card > .el-tabs__header .el-tabs__item:not(.is-disabled):hover {
+  color: #515a6e !important;
+}
+.navbar {
+  background-color: #fff;
+}
+.navbar .el-button:focus,
+.navbar .el-button:hover {
+  color: #515a6e !important;
+}
+.navbar .el-button,
+.navbar .el-breadcrumb__item:last-child .el-breadcrumb__inner,
+.navbar .el-breadcrumb__item:last-child .el-breadcrumb__inner a,
+.navbar .el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover,
+.navbar .el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+  color: #515a6e;
+}
+.navbar .el-breadcrumb__inner,
+.navbar .el-breadcrumb__separator {
+  color: #515a6e;
+}
+.logo-wrap {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+.menu {
+  background-color: #191a23 !important;
+}
+.menu .el-menu-item {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+.menu .el-menu-item:hover {
+  color: #FFF;
+}
+.menu .el-menu .is-active {
+  color: #515a6e !important;
+}
+.menu .el-menu-item-group,
+.menu .el-menu-item {
+  background-color: #191a23 !important;
+}
+.menu .el-menu-item:hover {
+  background-color: #000000 !important;
+  color: #FFF !important;
+}
+.menu .el-menu-item i {
+  color: inherit;
+}
+.menu .el-submenu__title .far,
+.menu .el-submenu__title .fa,
+.menu .el-submenu__title .fab,
+.menu .el-submenu__title .fas {
+  color: inherit;
+}
+.menu .el-submenu__title i {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+.menu .el-submenu__title {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+  background-color: #191a23 !important;
+}
+.menu .el-submenu__title:hover,
+.menu .is-opened .el-submenu__title {
+  color: #FFF !important;
+  background-color: #000000 !important;
+}
+.quick-card a:hover {
+  color: rgba(81, 90, 110, 0.8) !important;
+}
+.module h2,
+.module caption,
+.inline-group h2,
+.selector-chosen h2 {
+  background: #515a6e !important;
+  color: #FFF !important;
+}
+#changelist .actions {
+  min-height: 38px;
+}
+.colM {
+  overflow: auto;
+}
+.logo-wrap {
+  color: #c79c6d !important;
+  background-color: #191a23 !important;
+  padding-left: 20px;
+  text-align: center;
+}
+.menu .el-menu .is-active {
+  color: #c79c6d !important;
+}
+.menu * {
+  background-color: #191a23 !important;
+}
+.navbar .el-button:focus,
+.navbar .el-button:hover {
+  color: rgba(81, 90, 110, 0.7) !important;
+}
+.logo-wrap {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  height: 65px;
+  line-height: 65px;
+  border-bottom: 1px solid #101117;
+  background: #191a23;
+}
+.menu .fa,
+.menu .fas,
+.menu .far,
+.menu .fab {
+  font-size: 14px;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  color: #FFF;
+}
+</style> <div role="presentation" class="el-dialog__wrapper lite-menus" style="display: none;"><div role="document" tabindex="-1" class="el-drawer__container"><div aria-modal="true" aria-labelledby="el-drawer__title" role="presentation" class="el-drawer ltr" style="width: 50%;"><header id="el-drawer__title" class="el-drawer__header"><span role="heading">员工管理后台PRO</span><!----></header><!----></div></div></div> <section class="el-container" style="height: 388px;"><aside class="el-aside menu" style="width: 256px;"><div class="logo-wrap"><div class="float-wrap"><div class="left"><img src="/static/admin/simplepro/images/logo.png"></div> <div class="left"><span>员工管理后台PRO</span></div></div></div> <ul role="menubar" class="el-menu"><div><li role="menuitem" tabindex="-1" class="el-menu-item is-active" style="padding-left: 20px;"><i class="fas fa-home"></i> <span>首页</span></li></div><div><li role="menuitem" aria-haspopup="true" class="el-submenu is-opened" aria-expanded="true"><div class="el-submenu__title" style="padding-left: 20px;"><i class="far fa-file"></i> <span slot="title">内容类型</span><i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><ul role="menu" class="el-menu el-menu--inline" data-old-padding-top="" data-old-padding-bottom="" data-old-overflow="" style=""> <li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">内容类型</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-file"></i> <span>内容类型</span></li></ul></li></ul></li></div><div><li role="menuitem" aria-haspopup="true" class="el-submenu"><div class="el-submenu__title" style="padding-left: 20px;"><i class="far fa-file"></i> <span slot="title">收支管理</span><i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><ul role="menu" class="el-menu el-menu--inline" data-old-padding-top="" data-old-padding-bottom="" data-old-overflow="" style="display: none;"> <li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">收支记录</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-bookmark"></i> <span>收支记录</span></li></ul></li></ul></li></div><div><li role="menuitem" aria-haspopup="true" class="el-submenu"><div class="el-submenu__title" style="padding-left: 20px;"><i class="far fa-file"></i> <span slot="title">管理</span><i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><ul role="menu" class="el-menu el-menu--inline" data-old-padding-top="" data-old-padding-bottom="" data-old-overflow="" style="display: none;"> <li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">日志记录</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-bookmark"></i> <span>日志记录</span></li></ul></li></ul></li></div><div><li role="menuitem" aria-haspopup="true" class="el-submenu"><div class="el-submenu__title" style="padding-left: 20px;"><i class="fas fa-desktop"></i> <span slot="title">综合管理</span><i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><ul role="menu" class="el-menu el-menu--inline" data-old-padding-top="" data-old-padding-bottom="" data-old-overflow="" style="display: none;"> <li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">Demo1</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-file"></i> <span>Demo1</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">Demo2</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-file"></i> <span>Demo2</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">员工管理</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="fas fa-user-tie"></i> <span>员工管理</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">客户信息</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-user"></i> <span>客户信息</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">职务管理</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="fas fa-user-secret"></i> <span>职务管理</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">部门管理</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="fas fa-university"></i> <span>部门管理</span></li></ul></li></ul></li></div><div><li role="menuitem" aria-haspopup="true" class="el-submenu"><div class="el-submenu__title" style="padding-left: 20px;"><i class="fas fa-shield-alt"></i> <span slot="title">认证和授权</span><i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><ul role="menu" class="el-menu el-menu--inline" data-old-padding-top="" data-old-padding-bottom="" data-old-overflow="" style="display: none;"> <li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">权限</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="fas fa-shield-alt"></i> <span>权限</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">用户</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="far fa-user"></i> <span>用户</span></li></ul></li><li class="el-menu-item-group"><div class="el-menu-item-group__title" style="padding-left: 40px;">组</div><ul><li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;"><i class="fas fa-users-cog"></i> <span>组</span></li></ul></li></ul></li></div></ul></aside> <section class="el-container is-vertical"><header class="el-header navbar" style="height: auto; font-size: 12px; padding: 10px;"><div class="float-wrap"><div class="left"><button type="button" class="el-button el-button--default is-circle waves-effect" style="border: none;"><!----><i class="el-icon-s-fold"></i><!----></button> <div aria-label="Breadcrumb" role="navigation" class="el-breadcrumb" style="display: inline-block;"><span class="el-breadcrumb__item" aria-current="page"><span role="link" class="el-breadcrumb__inner"><i class="fas fa-home"></i>首页
+                    </span><span role="presentation" class="el-breadcrumb__separator">/</span></span> </div></div> <div class="right"><button type="button" class="el-button el-button--default is-circle"><!----><i class="el-icon-search"></i><!----></button> <button type="button" class="el-button el-button--default is-circle"><!----><i class="el-icon-tickets"></i><span><div role="presentation" class="el-dialog__wrapper" style="display: none;"><div role="document" tabindex="-1" class="el-drawer__container"><div aria-modal="true" aria-labelledby="el-drawer__title" role="presentation" class="el-drawer rtl" style="width: 30%;"><header id="el-drawer__title" class="el-drawer__header"><span role="heading">最近动作</span><button aria-label="close 最近动作" type="button" class="el-drawer__close-btn"><i class="el-dialog__close el-icon el-icon-close"></i></button></header><!----></div></div></div></span></button> <button type="button" class="el-button el-button--default is-circle"><!----><i class="el-icon-zoom-in"></i><!----></button> <div class="el-dropdown"><button type="button" class="el-button el-button--default waves-effect el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-2483" role="button" tabindex="0"><!----><!----><span><i class="el-icon-user"></i>
+                    张三丰
+                    <i class="el-icon-arrow-down el-icon--right"></i></span></button> </div> <button type="button" class="el-button el-button--default is-circle waves-effect"><!----><i class="el-icon-more-outline"></i><!----></button></div></div></header> <main class="el-main"><div class="el-tabs el-tabs--top el-tabs--border-card" style="height: 100%;"><div class="el-tabs__header is-top"><span tabindex="0" class="el-tabs__new-tab"><i class="el-icon-plus"></i></span><div class="el-tabs__nav-wrap is-top"><div class="el-tabs__nav-scroll"><div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(0px);"><div id="tab-0" aria-controls="pane-0" role="tab" tabindex="0" class="el-tabs__item is-top is-active is-closable" aria-selected="true"><span><span><i class="fas fa-home"></i> <span>首页</span></span></span><span class="el-icon-close"></span></div><div id="tab-1002" aria-controls="pane-1002" role="tab" tabindex="-1" class="el-tabs__item is-top is-closable"><span><span><i class="far fa-file"></i> <span>内容类型</span></span></span><span class="el-icon-close"></span></div><div id="tab-1004" aria-controls="pane-1004" role="tab" tabindex="-1" class="el-tabs__item is-top is-closable"><span><span><i class="far fa-bookmark"></i> <span>收支记录</span></span></span><span class="el-icon-close"></span></div><div id="tab-1009" aria-controls="pane-1009" role="tab" tabindex="-1" class="el-tabs__item is-top is-closable"><span><span><i class="far fa-file"></i> <span>Demo2</span></span></span><span class="el-icon-close"></span></div><div id="tab-1015" aria-controls="pane-1015" role="tab" tabindex="-1" class="el-tabs__item is-top is-closable"><span><span><i class="fas fa-shield-alt"></i> <span>权限</span></span></span><span class="el-icon-close"></span></div><div id="tab-15871018925230.37654702102938475" aria-controls="pane-15871018925230.37654702102938475" role="tab" tabindex="-1" class="el-tabs__item is-top is-closable"><span><span><i class="el-icon-bank-card"></i> <span>查看授权</span></span></span><span class="el-icon-close"></span></div><div id="tab-1016" aria-controls="pane-1016" role="tab" tabindex="-1" class="el-tabs__item is-top is-closable"><span><span><i class="far fa-user"></i> <span>用户</span></span></span><span class="el-icon-close"></span></div></div></div></div></div><div class="el-tabs__content"><div role="tabpanel" id="pane-0" aria-labelledby="tab-0" class="el-tab-pane" style=""> <div style="height: 100%;"><link rel="stylesheet" href="/static/admin/simplepro/css/home.css"> <div class="home-body"><div class="clearfix"><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-file" style="color: rgb(255, 214, 102);"></span> <span class="card-name">内容类型</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-bookmark" style="color: rgb(179, 127, 235);"></span> <span class="card-name">收支记录</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-bookmark" style="color: rgb(92, 219, 211);"></span> <span class="card-name">日志记录</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-file" style="color: rgb(105, 192, 255);"></span> <span class="card-name">Demo1</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-file" style="color: rgb(179, 127, 235);"></span> <span class="card-name">Demo2</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon fas fa-user-tie" style="color: rgb(255, 133, 192);"></span> <span class="card-name">员工管理</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-user" style="color: rgb(92, 219, 211);"></span> <span class="card-name">客户信息</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon fas fa-user-secret" style="color: rgb(255, 192, 105);"></span> <span class="card-name">职务管理</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon fas fa-university" style="color: rgb(255, 133, 192);"></span> <span class="card-name">部门管理</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon fas fa-shield-alt" style="color: rgb(179, 127, 235);"></span> <span class="card-name">权限</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon far fa-user" style="color: rgb(179, 127, 235);"></span> <span class="card-name">用户</span></a></div><div class="quick-wrap"><a href="javascript:;"><span class="icon fas fa-users-cog" style="color: rgb(105, 192, 255);"></span> <span class="card-name">组</span></a></div></div> <div class="charts"><div class="col"><div class="wrap"><div class="title">
+                访问量
+                <span class="date" style="background-color: rgb(246, 255, 237); border-color: rgb(183, 235, 143); color: rgb(82, 196, 26); background-position: initial initial; background-repeat: initial initial;">日</span></div> <div class="body"><div class="data">298,123</div> <div>日同比 12.5% 周同比 5%</div></div> <div class="bottom">总访问量100 万</div></div></div> <div class="col"><div class="wrap"><div class="title">
+                销售额
+                <span class="date" style="background-color: rgb(230, 247, 255); border-color: rgb(145, 213, 255); color: rgb(24, 144, 255); background-position: initial initial; background-repeat: initial initial;">月</span></div> <div class="body"><div class="data">¥1,000,000</div> <div><div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="el-progress el-progress--line el-progress--text-inside"><div class="el-progress-bar"><div class="el-progress-bar__outer" style="height: 26px;"><div class="el-progress-bar__inner" style="width: 70%;"><div class="el-progress-bar__innerText">70%</div></div></div></div><!----></div></div></div> <div class="bottom">总销售额68 万</div></div></div> <div class="col"><div class="wrap"><div class="title">
+                订单量
+                <span class="date" style="background-color: rgb(255, 241, 240); border-color: rgb(255, 163, 158); color: rgb(245, 34, 45); background-position: initial initial; background-repeat: initial initial;">周</span></div> <div class="body"><div class="data">888,000</div></div> <div class="bottom">转化率60%</div></div></div> <div class="col"><div class="wrap"><div class="title">
+                新增用户
+                <a class="el-tooltip item el-link el-link--default is-underline" aria-describedby="el-tooltip-5267" tabindex="0" style="position: absolute; right: 10px;"><i class="el-icon-question"></i><!----><!----></a></div> <div class="body"><div class="data">12306</div></div> <div class="bottom">总用户10800 人</div></div></div></div> <div class="card"><div class="title">访问统计图</div> <div class="body"><div _echarts_instance_="ec_1587101800292" style="width: 100%; height: 300px; -webkit-user-select: none; position: relative;"><div style="position: relative; overflow: hidden; width: 880px; height: 300px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1760" height="600" style="position: absolute; left: 0px; top: 0px; width: 880px; height: 300px; -webkit-user-select: none; padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div></div></div> <div style="height: 80px;"></div></div> <!----></div></div><div role="tabpanel" id="pane-1002" aria-labelledby="tab-1002" class="el-tab-pane" aria-hidden="true" style="display: none;"> <div class="iframe-wrap"><iframe src="/contenttypes/contenttype/" id="1002"></iframe> <!----></div></div><div role="tabpanel" id="pane-1004" aria-labelledby="tab-1004" class="el-tab-pane" aria-hidden="true" style="display: none;"> <div class="iframe-wrap"><iframe src="/finance/record/" id="1004"></iframe> <!----></div></div><div role="tabpanel" id="pane-1009" aria-labelledby="tab-1009" class="el-tab-pane" aria-hidden="true" style="display: none;"> <div class="iframe-wrap"><iframe src="/demo/demo2/" id="1009"></iframe> <!----></div></div><div role="tabpanel" id="pane-1015" aria-labelledby="tab-1015" class="el-tab-pane" aria-hidden="true" style="display: none;"> <div class="iframe-wrap"><iframe src="/auth/permission/" id="1015"></iframe> <!----></div></div><div role="tabpanel" id="pane-15871018925230.37654702102938475" aria-labelledby="tab-15871018925230.37654702102938475" class="el-tab-pane" aria-hidden="true" style="display: none;"> <div class="iframe-wrap"><iframe src="/simplepro/info/" id="15871018925230.37654702102938475"></iframe> <!----></div></div><div role="tabpanel" id="pane-1016" aria-labelledby="tab-1016" class="el-tab-pane" aria-hidden="true" style="display: none;"> <div class="iframe-wrap"><iframe src="/auth/user/" id="1016"></iframe> <!----></div></div></div></div></main></section></section> <!----> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="修改密码" class="el-dialog" style="margin-top: 15vh;"><div class="el-dialog__header"><span class="el-dialog__title">修改密码</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><!----></div></div> </div>
+
+    <script type="text/javascript">
+
+            var home = {
+                id: '0',
+                index: '1',
+                eid: '1',
+                name: "首页",
+                icon: 'fas fa-home'
+            };
+
+        menus.unshift(home);
+        window.language = {
+            change_password: '修改密码',
+            logout: '注销',
+            yes: '是',
+            no: '否',
+            confirm: '你确定吗？'
+        }
+        window.themeUrl = '/static/admin/simpleui-x/theme/';
+        window.urls = {
+            changePassword: "/password_change/",
+            logout: "/logout/"
+        }
+        var lanuageCode = 'zh-hans';
+
+        function localeError(e) {
+            console.warn("Please add the zh-hans.js language file to the '/simpleui-x/theme' directory.")
+            console.log("See simpleui i18n:https://github.com/newpanjing/simpleui/blob/master/i18n.md")
+            console.log("或者加入QQ群:786576510 (Join QQ Group.)")
+
+        }
+    </script>
+
+
+        <script type="text/javascript" src="/static/admin/simpleui-x/js/vue.min.js"></script>
+        <script type="text/javascript" src="/static/admin/simpleui-x/elementui/index.js"></script>
+
+
+    <script type="text/javascript">
+        __simpleui_version = '3.9.1';
+    </script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/automatic/dicts.js?_=2.1"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/automatic/segment.js"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/locale/en-us.js?_=2.1.2"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/locale/zh-hans.js?_=2.1.2" onerror="localeError()"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/js/cookie.js"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/theme/theme.js"></script>
+    <script type="text/javascript" src="/static/admin/simpleui-x/waves/waves.min.js?_=2.0.5"></script>
+
+
+
+
+ <script type="text/html" id="timeline">
+     <el-drawer
+                title="最近动作"
+                :visible.sync="show"
+                direction="rtl"
+                size="30%">
+
+
+
+
+                <div class="block" v-if="timeline">
+                    <el-timeline>
+
+                        <el-timeline-item timestamp="2020年4月17日 10:19" placement="top">
+                            <el-card>
+                                <p>test 2020年4月17日 10:19</p>
+                                <h4>部门: 修改了 &quot;44444&quot; - 没有字段被修改。</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月17日 10:19" placement="top">
+                            <el-card>
+                                <p>test 2020年4月17日 10:19</p>
+                                <h4>部门: 已经添加了 &quot;44444&quot;.</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月16日 16:02" placement="top">
+                            <el-card>
+                                <p>test 2020年4月16日 16:02</p>
+                                <h4>收支: 已经添加了 &quot;我的VIP_1型隧道&quot;.</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月16日 09:29" placement="top">
+                            <el-card>
+                                <p>test 2020年4月16日 09:29</p>
+                                <h4>demo1: 已经添加了 &quot;姓名：123456,　年龄：123&quot;.</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月15日 16:21" placement="top">
+                            <el-card>
+                                <p>test 2020年4月15日 16:21</p>
+                                <h4>部门: 修改了 &quot;adsfasdf&quot; - 没有字段被修改。</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月15日 10:35" placement="top">
+                            <el-card>
+                                <p>test 2020年4月15日 10:35</p>
+                                <h4>demo1: 修改了 &quot;姓名：11,　年龄：-1&quot; - 没有字段被修改。</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月15日 00:44" placement="top">
+                            <el-card>
+                                <p>test 2020年4月15日 00:44</p>
+                                <h4>收支: 修改了 &quot;356&quot; - 已修改type。</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月14日 11:04" placement="top">
+                            <el-card>
+                                <p>test 2020年4月14日 11:04</p>
+                                <h4>demo1: 已经添加了 &quot;姓名：11,　年龄：-1&quot;.</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月14日 10:46" placement="top">
+                            <el-card>
+                                <p>test 2020年4月14日 10:46</p>
+                                <h4>demo1: 修改了 &quot;姓名：3434,　年龄：23&quot; - 没有字段被修改。</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                        <el-timeline-item timestamp="2020年4月14日 10:46" placement="top">
+                            <el-card>
+                                <p>test 2020年4月14日 10:46</p>
+                                <h4>demo1: 已经添加了 &quot;姓名：3434,　年龄：23&quot;.</h4>
+                            </el-card>
+                        </el-timeline-item>
+
+                    </el-timeline>
+                </div>
+
+</script>
+
+
+
+        <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="自定义主题" class="el-dialog" style="margin-top: 15vh;"><div class="el-dialog__header"><span class="el-dialog__title">自定义主题</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><div class="el-dialog__footer"><div class="dialog-footer"><button type="button" class="el-button el-button--primary"><!----><!----><span>应用</span></button></div></div></div></div>
+
+
+    <script type="text/javascript" src="/static/admin/simplepro/js/chart.js"></script>
+    <script type="text/javascript" src="/static/admin/simplepro/js/timeline.js"></script>
+    <script type="text/javascript" src="/static/admin/simplepro/js/search.js"></script>
+    <script type="text/javascript" src="/static/admin/simplepro/js/index.js"></script>
+    <script type="text/javascript">
+        var less_url = '';
+
+            less_url = "/static/admin/simplepro/js/less.min.js";
+
+        var js_callback_url='/static/admin/simplepro/js/callback.js';
+
+    </script>
+
+        <script type="text/javascript" src="/static/admin/simpleui-x/js/index.js?_=3.9.1"></script><script src="/static/admin/simplepro/js/less.min.js" type="text/javascript" id="simplepro_less"></script><script type="text/javascript" src="/static/admin/simplepro/js/callback.js"></script>
+
+
+
+
+
+
+<script async="" type="text/javascript" src="//simpleui.88cto.com/analysis/eyduJzogJ05XcXJQWDIwOTMxOScsICdvJzogJ0xpbnV4LTMuMTAuMC05NTcuMjEuMy5lbDcueDg2XzY0LXg4Nl82NC13aXRoLWNlbnRvcy03LjQtQ29yZScsICdwJzogJzMuNy40JywgJ2QnOiAnMi4xJywgJ3MnOiAnMy45LjEnLCAndCc6ICdEZWZhdWx0J30="></script>
+
+    <script type="text/javascript" src="/static/admin/simplepro/nprogress/nprogress.js"></script>
+    <script type="text/javascript">
+        NProgress.start();
+    </script>
+
+
+<ul class="el-dropdown-menu el-popper" id="dropdown-menu-2483" style="transform-origin: center top; z-index: 2001; display: none;"><li tabindex="-1" class="el-dropdown-menu__item"><i class="el-icon-house"></i>查看主页</li> <li tabindex="-1" class="el-dropdown-menu__item"><i class="el-icon-bank-card"></i>查看授权</li> <span><li tabindex="0" class="el-dropdown-menu__item el-popover__reference" aria-describedby="el-popover-7436"><i class="el-icon-delete"></i>重置页面</li></span> <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided waves-effect"><i class="far fa-edit"></i>修改密码</li> <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided"><i class="el-icon-close"></i>注销</li><div x-arrow="" class="popper__arrow" style="left: 56.8984375px;"></div></ul><div role="tooltip" id="el-popover-7436" aria-hidden="true" class="el-popover el-popper el-popover--plain" tabindex="0" style="width: 50px; transform-origin: right center; z-index: 2003; display: none;"><!---->页面显示错乱的时候可以选择重置页面缓存数据。<div x-arrow="" class="popper__arrow" style="top: 10.5px;"></div></div><div role="presentation" class="el-dialog__wrapper" style="z-index: 2005; display: none;"><div role="document" tabindex="-1" class="el-drawer__container"><div aria-modal="true" aria-labelledby="el-drawer__title" role="presentation" class="el-drawer rtl" style="width: 25%;"><header id="el-drawer__title" class="el-drawer__header"><span role="heading">设置</span><button aria-label="close 设置" type="button" class="el-drawer__close-btn"><i class="el-dialog__close el-icon el-icon-close"></i></button></header><section class="el-drawer__body"><div class="drawer-body"><div class="el-card setting-card is-hover-shadow"><div class="el-card__header"><div class="clearfix"><span>改变主题</span> <button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><!----><!----><span>自定义主题</span></button></div></div><div class="el-card__body"> <div class="change-theme clearfix"><div title="默认" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(48, 65, 86); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(48, 65, 86); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Simpleui-x" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(44, 46, 57); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(44, 46, 57); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Element-UI" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(68, 126, 255); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="layui" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(57, 61, 73); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(35, 38, 46); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(35, 38, 46); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Ant Design Pro" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(0, 11, 22); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(0, 33, 64); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Admin LTE" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(43, 53, 57); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(60, 141, 188); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(60, 141, 188); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Highdmin" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(224, 224, 224); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(2, 192, 206); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(2, 192, 206); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Aircraft" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(224, 224, 224); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(77, 91, 118)), to(rgb(111, 128, 161))) !important; background-position: initial initial !important; background-repeat: initial initial !important;"></div></div> <div class="theme-top" style="background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(77, 91, 118)), to(rgb(111, 128, 161))) !important; background-position: initial initial !important; background-repeat: initial initial !important;"></div></div><div title="紫色" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(62, 66, 149); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="灰色" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(224, 224, 224); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(33, 58, 83); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(33, 58, 83); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="墨绿" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(40, 56, 70); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(40, 56, 70); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(243, 243, 244); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="橙色" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-image: linear-gradient(to right bottom, rgb(218, 131, 66), rgb(228, 81, 49)); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-image: linear-gradient(to right bottom, rgb(218, 131, 66), rgb(228, 81, 49)); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="黑色" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(51, 51, 51); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(51, 51, 51); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="绿色" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(25, 169, 123); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="淡雅" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(235, 241, 245); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(235, 241, 245); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(235, 241, 245); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise blue" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(59, 161, 223); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(59, 161, 223); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise blue pro" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(59, 161, 223); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(59, 161, 223); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise green" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(39, 173, 96); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(39, 173, 96); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise green pro" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(39, 173, 96); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(39, 173, 96); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise red" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(201, 51, 62); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(201, 51, 62); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise red pro" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(201, 51, 62); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(201, 51, 62); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise purple" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(130, 99, 177); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(130, 99, 177); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise purple pro" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(130, 99, 177); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(130, 99, 177); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise black" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(31, 44, 57); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(31, 44, 57); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="Enterprise black pro" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(31, 44, 57); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(31, 44, 57); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="x-green" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(47, 150, 136); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(47, 150, 136); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="x-red" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(170, 49, 48); background-position: initial initial; background-repeat: initial initial;"></div></div><div title="x-blue" class="theme-item waves-effect"><div class="theme-menu" style="background-color: rgb(38, 50, 56); background-position: initial initial; background-repeat: initial initial;"><div class="theme-logo" style="background-color: rgb(30, 159, 255); background-position: initial initial; background-repeat: initial initial;"></div></div> <div class="theme-top" style="background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"></div></div></div></div></div> <div class="el-card setting-card is-hover-shadow"><div class="el-card__header"><div class="clearfix"><div>设置字体大小</div></div></div><div class="el-card__body"> <div role="slider" aria-valuemin="12" aria-valuemax="30" aria-orientation="horizontal" class="el-slider el-slider--with-input" aria-valuetext="12" aria-label="slider between 12 and 30"><div class="el-slider__input el-input-number el-input-number--mini" debounce="300"><span role="button" class="el-input-number__decrease is-disabled"><i class="el-icon-minus"></i></span><span role="button" class="el-input-number__increase"><i class="el-icon-plus"></i></span><div class="el-input el-input--mini"><!----><input type="text" autocomplete="off" max="30" min="12" class="el-input__inner" role="spinbutton" aria-valuemax="30" aria-valuemin="12" aria-valuenow="12" aria-disabled="undefined"><!----><!----><!----><!----></div></div><div class="el-slider__runway show-input"><div class="el-slider__bar" style="left: 0%; width: 0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="left: 0%;"><div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-4788" tabindex="0"></div></div><!----><!----></div></div> <div style="text-align: right; padding-top: 20px;"><button type="button" class="el-button el-button--primary">重置</button></div></div></div> <div class="el-card box-card setting-card is-hover-shadow" style="margin-top: 20px;"><div class="el-card__header"><div class="clearfix"><span><i class="fab fa-stripe-s"></i>Simpleui <span>主页</span></span></div></div><div class="el-card__body"> <div class="float-wrap clearfix"><div style="text-align: center;"><table class="simpleui-table"><tbody><tr><th>Simple UI</th> <td>3.9.1</td> <td><span class="el-tag el-tag--small el-tag--light" style="cursor: pointer;">报告问题</span></td></tr> <tr><th width="120">Simple Pro</th> <td>1.2.1</td> <td><span class="el-tag el-tag--success el-tag--small el-tag--light" style="cursor: pointer;">报告问题</span></td></tr></tbody></table> <!----></div> <button type="button" class="el-button el-button--default"><!----><i class="fas fa-code"></i><span>Gitee
+                </span></button> <button type="button" class="el-button el-button--default"><!----><i class="fab fa-github"></i><span>
+                    Github
+                </span></button></div></div></div> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="Upgrade Simpleui" class="el-dialog" style="margin-top: 15vh; width: 50%;"><div class="el-dialog__header"><span class="el-dialog__title">Upgrade Simpleui</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><!----></div></div></div></section></div></div></div></body></html>
